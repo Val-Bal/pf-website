@@ -1,0 +1,418 @@
+/*
+Colors used
+
+Text Color (dark mint green): #346C53;
+Primary Color (very light mint): #DBEDE5;
+Secondary Color (dark green): #49695A; 
+ */
+
+/* || VARIABLES */
+:root {
+    --text-color: #346C53;
+    --primary-color: #DBEDE5;
+    --secondary-color: #49695A;
+    --visited-color: #59806e;
+    --hover-color: #223029;
+    --active-color: #769b8a;
+    --nav-visited-color: #59806e;
+    --nav-hover-color: #e62424;
+    --nav-active-color: #e62424;
+    --button-background-color: #e62424;
+    --button-text-color: white;
+    --button-border-color: rgba(0, 0, 0, 0.3);
+    --sun-yellow: #edc655;
+    --sun-red: #f76414;
+    --font-size-header: 16px;
+    --font-size-main: 16px;
+    --font-size-footer: 12px;
+    --grid-background-color: #f3f5f5;
+}
+
+/* || GENERAL */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Times New Roman', serif; */
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+
+/* || MAIN */
+
+main {
+    font-size: var(--font-size-main);
+    line-height: 1.5em;
+    padding: 1%;
+}
+
+
+/* || HEADER */
+
+header {
+    font-size: var(--font-size-header);
+    line-height: 1.5em;
+    padding: 0% 1%;
+    color: var(--secondary-color);
+    max-width: 100%;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    border-bottom: solid;
+    border-color: var(--active-color);
+}
+
+.main-navigation {
+    margin: auto;
+}
+
+.page-header__item {
+    flex: 0 1 200px;
+}
+
+.page-header__item:last-child {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.navigation-list {
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 10px;
+    color: var(--secondary-color);
+    transition: 0.2s opacity;
+    display: inline-block;
+}
+
+.navigation-list:visited {
+    /* visited link */
+    color: var(--nav-visited-color);
+}
+
+.navigation-list:hover {
+    color: var(--nav-hover-color);
+    /* No underlining when hovering over a link */
+    /* text-decoration: none; */
+    cursor: pointer;
+}
+
+.navigation-list:active {
+    /* selected link */
+    color: var(--nav-active-color);
+}
+
+
+/* || IMG */
+
+img#logo {
+    display: inline-block;
+    padding: 5px -10px;
+    margin: 5px -10px;
+    max-width: 100%;
+    /* height: 250px;
+    width: 250px; */
+}
+
+img.profile__portrait {
+    padding: 10px 5px;
+    margin: 0 auto;
+    margin-right: 40px;
+    min-width: 300px;
+    max-width: 400px;
+    height: auto;
+    float: left;
+    border-radius: 50%;
+}
+
+.profile {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+img.svg {
+    padding: 0.5%;
+    height: 50px;
+    width: 50px;
+}
+
+img.wave {
+    height: 250px;
+    width: 250px;
+}
+
+/* FOOTER */
+
+footer {
+    font-size: var(--font-size-footer);
+    line-height: 0.5em;
+    padding: 1%;
+}
+
+.footer {
+    clear: both;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* || CONTACT PAGE */
+
+#contact {
+   text-align: center; 
+}
+
+/* || WORK/PROJECTS PAGE */
+
+#projects {
+    text-align: center; 
+ }
+
+
+/* || TABLE */
+
+table,
+th,
+td {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+th {
+    height: 30px;
+    border-bottom: 2px solid;
+}
+
+table {
+    width: 50%;
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: left;
+}
+
+.table-about {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* || a links */
+a {
+    color: var(--secondary-color);
+    transition: 0.2s opacity;
+    display: inline-block;
+}
+
+a:visited {
+    /* visited link */
+    color: var(--visited-color);
+}
+
+a:hover {
+    color: var(--hover-color);
+    /* No underlining when hovering over a link */
+    /* text-decoration: none; */
+    cursor: pointer;
+}
+
+a:active {
+    /* selected link */
+    color: var(--active-color);
+}
+
+/* || ABOUT SECTION */
+
+.about {
+    text-align: center;
+}
+
+.about-list {
+    list-style-type: none;
+}
+
+#about-picture {
+    margin: 5%;
+}
+
+.about {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* || BUTTON */
+
+button,
+a.button {
+    color: var(--secondary-color);
+    /* overwrites browser defaults and resets the border */
+    border: none;
+    /* takes the font from the outer container */
+    font-family: inherit;
+    /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    text-decoration: none;
+    /*adds spacing to the button */
+    padding: 10px 25px;
+    /*the higher the number the rounder the edges of the button, up to... */
+    border-radius: 3px;
+    /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+    border-bottom: 2px solid var(--button-border-color);
+    transition: 0.2s opacity;
+    display: inline-block;
+}
+
+button:hover,
+a.button:hover {
+    color: var(--hover-color);
+    /* lets the mouse appear as a hand when hovering over the button */
+    cursor: pointer;
+    /* reduces the opacity of the button to 80% */
+    opacity: 0.8;
+    padding: 12px 27px;
+}
+
+/*  || PROJECT LIST GRID */
+
+.project-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    
+}
+
+.project-list__item {
+    background-color: var(--grid-background-color);
+    padding: 5px;
+    border: 1px solid;
+}
+
+/*  || MEDIA Querries (always at the end) */
+
+@media all and (max-width: 500px) {
+    .project-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+    .project-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media all and (max-width: 750px) {
+    .project-list {
+        grid-gap: 10px;
+    }
+
+    .project-list__item:last-child {
+        grid-column: auto / auto;
+        grid-row: auto / auto;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+}
+
+/* KEYFRAMES */
+
+/* BERLIN PICTURE */
+#about-picture {
+    max-width: 450px;
+}
+
+/* KEYFRAMES SUN */
+/* color-change is simply a name that's been given to the animation */
+@keyframes color-change {
+    from {
+        fill: var(--sun-yellow);
+    }
+
+    to {
+        fill: var(--sun-red);
+    }
+}
+
+.sun {
+    animation: 4s color-change infinite alternate linear;
+}
+
+/* KEYFRAMES CLOUD FRONT*/
+@keyframes cloud-move {
+    from {
+        transform: translate(0, 50px);
+    }
+
+    to {
+        transform: translate(200px, 50px);
+    }
+}
+
+.cloud-front {
+    animation: 30s cloud-move infinite alternate linear;
+}
+
+/* KEYFRAMES CLOUD FRONT*/
+@keyframes cloud-move-reverse {
+    from {
+        transform: translate(446px, 48px);
+    }
+
+    to {
+        transform: translate(100px, 48px);
+    }
+}
+
+.cloud-back {
+    animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+/* WAVE PICTURE */
+#wave-picture_animated {
+    max-width: 450px;
+}
+
+/* KEYFRAMES WAVE DOT*/
+@keyframes wave-move {
+    from {
+        transform: translate(0, 50px);
+    }
+
+    to {
+        transform: translate(25px, 50px);
+    }
+}
+
+#wave-picture_animated {
+    animation: 2s wave-move infinite alternate linear;
+}
+
+@keyframes dot-move {
+    from {
+        transform: translate(0, 50px);
+    }
+
+    to {
+        transform: translate(35px, -80px);
+    }
+}
+
+.big-dot1,
+.big-dot2,
+.big-dot3,
+.small-dot1,
+.small-dot2 {
+    animation: 2s dot-move infinite alternate linear;
+}
