@@ -147,6 +147,12 @@ img.wave {
     width: 250px;
 }
 
+.project-list__item img {
+    width: 500px; 
+    height: 270px; 
+}
+
+
 /* FOOTER */
 
 footer {
